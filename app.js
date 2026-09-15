@@ -1,20 +1,8 @@
 import { applyMapHighlights, regionsFromMuscles, toRegion, REGION_LABELS } from "./muscles.js";
 import { equipmentIcon, equipmentLabel } from "./equipment.js";
 
-const REPO = "mfortini/exercise-library";
-const BRANCH = "main";
-
-function assetBase() {
-  const host = location.hostname;
-  if (host.endsWith("github.io") || host.includes("cdn.")) {
-    return `https://cdn.jsdelivr.net/gh/${REPO}@${BRANCH}`;
-  }
-  return new URL("..", location.href).href.replace(/\/$/, "");
-}
-
-const BASE = assetBase();
-const DATA_URL = `${BASE}/exercises.json`;
-const gifUrl = (gif) => `${BASE}/gifs/${gif}`;
+const DATA_URL = "./exercises.json";
+const gifUrl = (gif) => `./gifs/${gif}`;
 
 function fixMojibake(str) {
   if (!str || typeof str !== "string") return str;
@@ -730,7 +718,7 @@ async function init() {
   } catch (err) {
     console.error(err);
     showStatus(
-      `${err.message}. Serve the repo root over HTTP (e.g. python -m http.server) and open /docs/.`,
+      `${err.message}. Serve the repository root over HTTP (e.g. python -m http.server) and open /.`,
       true
     );
     els.count.textContent = "Failed to load";
