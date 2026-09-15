@@ -170,6 +170,19 @@ body {
   height: auto;
 }
 
+.detail-map {
+  pointer-events: none;
+  user-select: none;
+}
+
+.detail-map .region {
+  cursor: default !important;
+}
+
+.detail-map .region:hover {
+  fill: inherit;
+}
+
 .body-map-wrap .region.is-disabled {
   fill: #c5cdd6 !important;
   stroke: #a8b0b8 !important;

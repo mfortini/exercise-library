@@ -440,6 +440,12 @@ function setupMaps(svgText) {
   state.filterMapSvg = els.filterMap.querySelector("svg");
   state.detailMapSvg = els.detailMap.querySelector("svg");
 
+  // Detail map is display-only (highlights), not a filter control.
+  state.detailMapSvg?.querySelectorAll("[data-region]").forEach((el) => {
+    el.style.cursor = "default";
+    el.style.pointerEvents = "none";
+  });
+
   state.filterMapSvg.querySelectorAll("[data-region]").forEach((el) => {
     el.addEventListener("click", () => {
       if (el.classList.contains("is-disabled")) return;
