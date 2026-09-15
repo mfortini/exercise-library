@@ -2,10 +2,53 @@
 
 > **1,112+ exercises** with animated GIFs, muscle targeting data, and step-by-step instructions
 
-[![Exercises](https://img.shields.io/badge/Exercises-1,112+-blue.svg)](https://github.com/mohamedatef90/exercise-library)
-[![Muscle Groups](https://img.shields.io/badge/Muscle%20Groups-19-green.svg)](https://github.com/mohamedatef90/exercise-library)
-[![Equipment Types](https://img.shields.io/badge/Equipment-25%2B-orange.svg)](https://github.com/mohamedatef90/exercise-library)
+[![Exercises](https://img.shields.io/badge/Exercises-1,112+-blue.svg)](https://github.com/mfortini/exercise-library)
+[![Muscle Groups](https://img.shields.io/badge/Muscle%20Groups-19-green.svg)](https://github.com/mfortini/exercise-library)
+[![Equipment Types](https://img.shields.io/badge/Equipment-25%2B-orange.svg)](https://github.com/mfortini/exercise-library)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+---
+
+## 🌐 Browse online
+
+A visual browser lives in [`docs/`](docs/) — toolbar filters (search, body part, horizontal equipment icons, muscles sheet), removable active chips, and GIF grid. Built with Bootstrap 5.
+
+**Permalinks (URL hash fragments)**
+
+Filter state and open exercise are stored in the hash, e.g.:
+
+```
+…/docs/#body=chest&equip=dumbbell&map=chest&ex=EIeI8Vf
+```
+
+| Key | Meaning |
+|-----|---------|
+| `q` | name search |
+| `body` | body part(s), comma-separated |
+| `equip` | equipment |
+| `map` | body-map region(s) |
+| `target` / `secondary` | muscle chips |
+| `ex` | open exercise id |
+
+Use **Copy link** / **Copy exercise link** in the UI. Legacy `?query` URLs are migrated to `#hash` on load.
+
+
+**Enable GitHub Pages**
+
+1. Repo **Settings → Pages**
+2. **Source**: Deploy from a branch
+3. Branch: `main`, folder: `/docs`
+4. Save — the site will be at `https://mfortini.github.io/exercise-library/`
+
+On GitHub Pages, exercise data and GIFs are loaded from the repo via jsDelivr (the `/docs` publish root cannot serve `../gifs`).
+
+**Preview locally**
+
+```bash
+# from the repository root
+python3 -m http.server 8080
+# open http://localhost:8080/docs/
+```
 
 ---
 
@@ -26,6 +69,13 @@
 
 ```
 exercise-library/
+├── docs/                # GitHub Pages browser
+│   ├── index.html
+│   ├── styles.css
+│   ├── app.js
+│   ├── muscles.js
+│   ├── equipment.js
+│   └── body-map.svg
 ├── exercises.json       # Complete exercise database (1.4MB)
 ├── gifs/               # 1,112 animated GIF files
 │   ├── 2gPfomN.gif

@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 280" role="img" aria-label="Body muscle map">
+  <style>
+    .silhouette { fill: #e8ecef; stroke: #9aa3ad; stroke-width: 1.2; }
+    .region { fill: #c5ced6; stroke: #8b959e; stroke-width: 0.8; cursor: pointer; transition: fill 0.15s ease; }
+    .region:hover { fill: #a8b4c0; }
+    .region.is-selected { fill: #3b82f6; stroke: #1d4ed8; }
+    .region.is-primary { fill: #ef4444; stroke: #b91c1c; }
+    .region.is-secondary { fill: #fbbf24; stroke: #d97706; }
+    .label { fill: #64748b; font-family: system-ui, sans-serif; font-size: 11px; }
+  </style>
+
+  <!-- Front -->
+  <text class="label" x="80" y="16" text-anchor="middle">Front</text>
+  <g id="front">
+    <!-- neck -->
+    <rect class="region" data-region="neck" x="72" y="28" width="16" height="12" rx="3"/>
+    <!-- shoulders -->
+    <ellipse class="region" data-region="shoulders" cx="52" cy="52" rx="14" ry="10"/>
+    <ellipse class="region" data-region="shoulders" cx="108" cy="52" rx="14" ry="10"/>
+    <!-- chest -->
+    <path class="region" data-region="chest" d="M58 48h44c2 0 6 4 6 10v14c0 4-4 8-10 8H62c-6 0-10-4-10-8V58c0-6 4-10 6-10z"/>
+    <!-- serratus -->
+    <path class="region" data-region="serratus" d="M48 72l8 18H52l-8-12z"/>
+    <path class="region" data-region="serratus" d="M112 72l-8 18h4l8-12z"/>
+    <!-- abs -->
+    <rect class="region" data-region="abs" x="68" y="82" width="24" height="36" rx="4"/>
+    <!-- obliques -->
+    <path class="region" data-region="obliques" d="M54 82l14 0v36l-10-8z"/>
+    <path class="region" data-region="obliques" d="M106 82l-14 0v36l10-8z"/>
+    <!-- biceps -->
+    <ellipse class="region" data-region="biceps" cx="40" cy="88" rx="8" ry="16"/>
+    <ellipse class="region" data-region="biceps" cx="120" cy="88" rx="8" ry="16"/>
+    <!-- forearms -->
+    <ellipse class="region" data-region="forearms" cx="36" cy="120" rx="7" ry="14"/>
+    <ellipse class="region" data-region="forearms" cx="124" cy="120" rx="7" ry="14"/>
+    <!-- quads -->
+    <ellipse class="region" data-region="quads" cx="68" cy="160" rx="12" ry="28"/>
+    <ellipse class="region" data-region="quads" cx="92" cy="160" rx="12" ry="28"/>
+    <!-- adductors -->
+    <ellipse class="region" data-region="adductors" cx="80" cy="155" rx="6" ry="16"/>
+    <!-- calves -->
+    <ellipse class="region" data-region="calves" cx="68" cy="210" rx="9" ry="20"/>
+    <ellipse class="region" data-region="calves" cx="92" cy="210" rx="9" ry="20"/>
+    <!-- cardio (heart) -->
+    <path class="region" data-region="cardio" d="M80 58c-2-4-8-4-8 2 0 6 8 10 8 10s8-4 8-10c0-6-6-6-8-2z"/>
+  </g>
+
+  <!-- Back -->
+  <text class="label" x="240" y="16" text-anchor="middle">Back</text>
+  <g id="back">
+    <!-- neck -->
+    <rect class="region" data-region="neck" x="232" y="28" width="16" height="12" rx="3"/>
+    <!-- traps -->
+    <path class="region" data-region="traps" d="M218 42h44l-8 18h-28z"/>
+    <!-- shoulders rear -->
+    <ellipse class="region" data-region="shoulders" cx="212" cy="52" rx="14" ry="10"/>
+    <ellipse class="region" data-region="shoulders" cx="268" cy="52" rx="14" ry="10"/>
+    <!-- upper back -->
+    <path class="region" data-region="upper_back" d="M222 58h36c4 0 8 4 8 10v16c0 4-4 6-8 6h-36c-4 0-8-2-8-6V68c0-6 4-10 8-10z"/>
+    <!-- lats -->
+    <path class="region" data-region="lats" d="M210 70l14 40h-8l-12-28z"/>
+    <path class="region" data-region="lats" d="M270 70l-14 40h8l12-28z"/>
+    <!-- spine / lower back -->
+    <rect class="region" data-region="spine" x="236" y="90" width="8" height="40" rx="2"/>
+    <path class="region" data-region="lower_back" d="M222 118h36c2 0 4 4 4 8v10h-44v-10c0-4 2-8 4-8z"/>
+    <!-- triceps -->
+    <ellipse class="region" data-region="triceps" cx="200" cy="88" rx="8" ry="16"/>
+    <ellipse class="region" data-region="triceps" cx="280" cy="88" rx="8" ry="16"/>
+    <!-- forearms -->
+    <ellipse class="region" data-region="forearms" cx="196" cy="120" rx="7" ry="14"/>
+    <ellipse class="region" data-region="forearms" cx="284" cy="120" rx="7" ry="14"/>
+    <!-- glutes -->
+    <ellipse class="region" data-region="glutes" cx="228" cy="145" rx="14" ry="12"/>
+    <ellipse class="region" data-region="glutes" cx="252" cy="145" rx="14" ry="12"/>
+    <!-- hamstrings -->
+    <ellipse class="region" data-region="hamstrings" cx="228" cy="178" rx="11" ry="24"/>
+    <ellipse class="region" data-region="hamstrings" cx="252" cy="178" rx="11" ry="24"/>
+    <!-- abductors (outer hip) -->
+    <ellipse class="region" data-region="abductors" cx="214" cy="150" rx="6" ry="12"/>
+    <ellipse class="region" data-region="abductors" cx="266" cy="150" rx="6" ry="12"/>
+    <!-- calves -->
+    <ellipse class="region" data-region="calves" cx="228" cy="220" rx="9" ry="18"/>
+    <ellipse class="region" data-region="calves" cx="252" cy="220" rx="9" ry="18"/>
+  </g>
+
+  <!-- core alias: clicking abs also represents core in UI via JS -->
+</svg>
